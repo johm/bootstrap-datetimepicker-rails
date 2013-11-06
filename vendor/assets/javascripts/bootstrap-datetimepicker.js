@@ -643,7 +643,7 @@
       },
 
       incrementMinutes: function(e) {
-        this._date.setUTCMinutes(this._date.getUTCMinutes() + 1);
+        this._date.setUTCMinutes(this._date.getUTCMinutes() + this.options.minuteStep || 1);
       },
 
       incrementSeconds: function(e) {
@@ -655,7 +655,7 @@
       },
 
       decrementMinutes: function(e) {
-        this._date.setUTCMinutes(this._date.getUTCMinutes() - 1);
+        this._date.setUTCMinutes(this._date.getUTCMinutes() - this.options.minuteStep || 1);
       },
 
       decrementSeconds: function(e) {
